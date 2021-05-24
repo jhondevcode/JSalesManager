@@ -3,3 +3,6 @@
 
 # Maven compilations
 /target
+
+# Log files
+/logs
