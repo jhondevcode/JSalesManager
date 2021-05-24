@@ -50,7 +50,7 @@ public abstract class Configuration {
 	 * @param key   setting to which you want to change the set value
 	 * @param value new value which will be assigned to the indicated configuration.
 	 */
-	public abstract String set(String key, String value);
+	public abstract void set(String key, String value);
 
 	protected String read(String k) {
 		Properties config = new Properties();
