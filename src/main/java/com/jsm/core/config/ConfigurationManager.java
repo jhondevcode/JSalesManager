@@ -1,9 +1,4 @@
-package com.jsm.core;
-
-import com.jsm.core.config.Configuration;
-import com.jsm.core.config.LangConfiguration;
-import com.jsm.core.config.NetworkConfiguration;
-import com.jsm.core.config.ViewConfiguration;
+package com.jsm.core.config;
 
 /**
  * Provides a configuration manager with which you can access the different
