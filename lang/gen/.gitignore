@@ -8,6 +8,7 @@
 /.idea
 
 # Virtual environment files
+pyvenv.cfg
 # for windows
 /Lib
 /Scripts
