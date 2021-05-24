@@ -12,7 +12,7 @@ import org.tinylog.Logger;
  */
 public class Main {
 
-	/**
+	/*
 	 * Set up the logger
 	 */
 	static {
