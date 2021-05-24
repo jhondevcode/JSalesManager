@@ -1,0 +1,11 @@
+# IntelliJ IDEA files
+/.idea
+
+# eclipse IDE files
+/.settings
+.classpath
+.project
+/bin
+
+# Maven compilations
+/target

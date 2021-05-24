@@ -1,14 +1,2 @@
-# IntelliJ IDEA files
-/.idea
-
-# Maven compilations
-/target
-
 # Log files
 /logs
-
-# eclipse IDE files
-/.settings
-.classpath
-.project
-/bin
