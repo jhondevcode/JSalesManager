@@ -1,7 +1,8 @@
 package com.jsm.core.config;
 
 import java.io.IOException;
-import java.util.List;
+
+import java.util.Map;
 
 import org.tinylog.Logger;
 
@@ -68,9 +69,11 @@ public class LangConfiguration extends Configuration {
 	 */
 	@Override
 	public void reset() {
-		this.set("name", "English");
-		this.set("url", "https://github.com/jhondev-code/JSalesManager/lang/EN_en.dict");
-		this.set("path", "${WORKSPACE}" + Workspace.PATH_SEPARATOR + "lang" + Workspace.PATH_SEPARATOR + "EN_en.dict");
+		Map<String, String> properties = Map.of(
+				"name", "English",
+				"url", "https://github.com/jhondev-code/JSalesManager/lang/EN_en.dict",
+				"path", "${WORKSPACE}" + Workspace.PATH_SEPARATOR + "lang" + Workspace.PATH_SEPARATOR + "EN_en.dict");
+		this.dumpMap(properties);
 	}
 
 }
