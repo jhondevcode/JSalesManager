@@ -6,3 +6,11 @@
 
 # PyCharm settings
 /.idea
+
+# Virtual environment files
+# for windows
+/Lib
+/Scripts
+# for linux
+/bin
+/lib
