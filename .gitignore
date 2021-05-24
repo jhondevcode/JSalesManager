@@ -1,0 +1,5 @@
+# IntelliJ IDEA files
+/.idea
+
+# Maven compilations
+/target
