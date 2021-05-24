@@ -20,7 +20,7 @@ import java.time.LocalDate;
 public class LoggerConfigurator {
 
 	private static final String LOG_OUTPUT = JSMApp.WORKSPACE + JSMApp.PATH_SEPARATOR + "logs";
-	public static final String LOG_FILE = LOG_OUTPUT + JSMApp.PATH_SEPARATOR + "log_" + LocalDate.now() + ".log";
+	private static final String LOG_FILE = LOG_OUTPUT + JSMApp.PATH_SEPARATOR + "log_" + LocalDate.now() + ".log";
 
 	/**
 	 * It does a verification of the output directory in which the log file will be
