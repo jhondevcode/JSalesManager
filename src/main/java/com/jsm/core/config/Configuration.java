@@ -7,6 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import java.util.Map;
 import java.util.Properties;
 
 import org.tinylog.Logger;
@@ -24,7 +25,7 @@ import org.tinylog.Logger;
  */
 public abstract class Configuration {
 
-	private File configFile;
+	private final File configFile;
 
 	public Configuration(String configPath) {
 		this.configFile = new File(configPath);
@@ -80,12 +81,16 @@ public abstract class Configuration {
 	}
 
 	protected void write(String k, String v) {
+		this.dumpMap(Map.of(k, v));
+	}
+
+	public void dumpMap(Map<String, String> properties) {
 		Properties config = new Properties();
 		BufferedInputStream bis = null;
 		try {
 			bis = new BufferedInputStream(new FileInputStream(this.configFile));
 			config.load(bis);
-			config.setProperty(k, v);
+			properties.forEach(config::setProperty);
 		} catch (IOException ioe) {
 			Logger.error(ioe);
 		} finally {
