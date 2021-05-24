@@ -64,6 +64,18 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.4.31.Final</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.xmlgraphics/batik-svg-dom -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-svg-dom</artifactId>
+            <version>1.14</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.xmlgraphics/batik-transcoder -->
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-transcoder</artifactId>
+            <version>1.14</version>
+        </dependency>
 
     </dependencies>
 
