@@ -1,6 +1,7 @@
 package com.jsm;
 
 import com.jsm.log.LoggerConfigurator;
+
 import org.tinylog.Logger;
 
 /**
@@ -12,17 +13,12 @@ import org.tinylog.Logger;
  */
 public class Main {
 
-	/*
-	 * Set up the logger
-	 */
-	static {
-		LoggerConfigurator.configure();
-	}
-
 	/**
 	 * Launch the program
 	 */
 	public static void main(String[] args) {
+		new com.jsm.core.Workspace().startChecking();
+		LoggerConfigurator.configure();
 		Logger.info("Starting...");
 		JSMApp.start(args);
 	}
