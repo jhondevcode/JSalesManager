@@ -6,3 +6,9 @@
 
 # Log files
 /logs
+
+# eclipse IDE files
+/.settings
+.classpath
+.project
+/bin
