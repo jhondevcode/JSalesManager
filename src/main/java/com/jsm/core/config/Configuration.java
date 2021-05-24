@@ -45,6 +45,11 @@ public abstract class Configuration {
 	public abstract String get(String key);
 
 	/**
+	 * Restores the default values of the configuration file.
+	 */
+	public abstract void reset();
+
+	/**
 	 * Modify the value of a key inside the configuration file.
 	 * 
 	 * @param key   setting to which you want to change the set value
@@ -109,7 +114,7 @@ public abstract class Configuration {
 			config.clear();
 		}
 	}
-	
+
 	protected File getConfigFileInstance() {
 		return this.configFile;
 	}
