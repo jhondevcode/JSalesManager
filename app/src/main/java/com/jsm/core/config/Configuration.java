@@ -48,6 +48,17 @@ public abstract class Configuration {
 	public abstract String get(String key);
 
 	/**
+	 * Gets the values for a group of specified properties. This method should only
+	 * be used when multiple values are required, with this functionality time and
+	 * resources are saved by requiring multiple values, this functionality is
+	 * implemented because its counterpart reads the file in each call while this
+	 * method reads all the values required in a single call.
+	 * 
+	 * @param keys A list of all keys for which their values are required
+	 */
+	public abstract Map<String, String> get(List<String> keys);
+
+	/**
 	 * Restores the default values of the configuration file.
 	 */
 	public abstract void reset();
