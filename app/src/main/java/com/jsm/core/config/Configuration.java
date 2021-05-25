@@ -8,6 +8,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
 import org.tinylog.Logger;
@@ -78,6 +80,38 @@ public abstract class Configuration {
 			}
 		}
 		return "null";
+	}
+
+	protected Map<String, String> read(List<String> ks) {
+		if (ks.size() > 0) {
+			if (ks.size() == 1) {
+				return Map.of(ks.get(0), this.read(ks.get(0)));
+			} else {
+				Properties config = new Properties();
+				BufferedInputStream bis = null;
+				try {
+					bis = new BufferedInputStream(new FileInputStream(this.configFile));
+					Map<String, String> mapKV = new HashMap<>();
+					config.load(bis);
+					ks.forEach(key -> mapKV.put(key, String.valueOf(config.getProperty(key))));
+					return mapKV;
+				} catch (IOException ioe) {
+					Logger.error(ioe);
+				} finally {
+					config.clear();
+					if (bis != null) {
+						try {
+							bis.close();
+						} catch (IOException ioe) {
+							Logger.error(ioe);
+						}
+					}
+				}
+				return Map.of();
+			}
+		} else {
+			return Map.of();
+		}
 	}
 
 	protected void write(String k, String v) {
