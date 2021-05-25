@@ -4,6 +4,8 @@ import com.jsm.core.Workspace;
 import org.tinylog.Logger;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This class allows handling the properties configured for the network such as
@@ -65,4 +67,8 @@ public class NetworkConfiguration extends Configuration {
 		// in advance ...
 	}
 
+	@Override
+	public Map<String, String> get(List<String> keys) {
+		return this.get(keys);
+	}
 }

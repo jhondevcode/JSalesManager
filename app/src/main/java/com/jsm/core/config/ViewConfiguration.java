@@ -4,6 +4,8 @@ import com.jsm.core.Workspace;
 import org.tinylog.Logger;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * It allows managing the configuration properties for the views and components
@@ -66,6 +68,11 @@ public class ViewConfiguration extends Configuration {
 	@Override
 	public void reset() {
 		// in advance...
+	}
+
+	@Override
+	public Map<String, String> get(List<String> keys) {
+		return this.get(keys);
 	}
 
 }
