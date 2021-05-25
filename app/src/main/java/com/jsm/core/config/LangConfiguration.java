@@ -78,7 +78,7 @@ public class LangConfiguration extends Configuration {
 
 	@Override
 	public Map<String, String> get(List<String> keys) {
-		return this.get(keys);
+		return this.read(keys);
 	}
 
 }
