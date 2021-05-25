@@ -74,7 +74,7 @@ class ArgumentProcessor:
             + self.__target.upper()
             + "_"
             + self.__target.lower()
-            + ".txt"
+            + ".dict"
         )
         source_file = open(self.__file, "r", encoding="utf-8")
         target_file = open(output_name, "w", encoding="utf8")
