@@ -1,8 +1,17 @@
 package com.jsm;
 
 import com.jsm.core.Workspace;
+import com.jsm.core.lang.DictionaryManager;
+import com.jsm.img.png.PNGLoader;
+import com.jsm.ui.laf.ProgressBarUI;
+import com.jsm.ui.widget.JSMFrame;
 
 import java.util.Map;
+
+import javax.swing.JProgressBar;
+import javax.swing.JButton;
+
+import java.util.HashMap;
 
 /**
  * This class is in charge of executing the visual part of the program as well
@@ -21,12 +30,6 @@ public class JSMApp {
 	 * configuring and displaying the program.
 	 */
 	public static void start(String[] args) {
-		new com.jsm.core.Workspace().startChecking();
-		Map<String, String> properties = Map.of(
-				"name", "English",
-				"url", "https://github.com/jhondev-code/JSalesManager/lang/EN_en.dict",
-				"path", "${WORKSPACE}" + Workspace.PATH_SEPARATOR + "lang" + Workspace.PATH_SEPARATOR + "EN_en.dict");
-		properties.forEach((key, value) -> System.out.println(key + ": " + value));
+		System.out.println("Hello world");
 	}
-
 }
